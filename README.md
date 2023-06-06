@@ -1,4 +1,9 @@
-# sa-custom-roles-gcp-terraform
+# datasets-tables-bq-one-module-terraform
+
+This project how to create BigQuery Datasets and tables with Terraform and elegant Json configuration. 
+The deployment of IAC part is done with Cloud Build.
+
+![datasets_with_tables_one_module_terraform.png](images%2Fdatasets_with_tables_one_module_terraform.png)
 
 ## Build from local machine
 
@@ -54,7 +59,7 @@ gcloud builds submit \
 gcloud beta builds triggers create manual \
   --project=$PROJECT_ID \
   --region=$LOCATION \
-  --name="terraform-plan" \
+  --name="datasets_tables_one_module_terraform-plan" \
   --repo="https://github.com/tosun-si/sa-custom-roles-gcp-terraform" \
   --repo-type="GITHUB" \
   --branch="main" \
@@ -69,7 +74,7 @@ gcloud beta builds triggers create manual \
 gcloud beta builds triggers create manual \
   --project=$PROJECT_ID \
   --region=$LOCATION \
-  --name="terraform-apply" \
+  --name="datasets_tables_one_module_terraform-apply" \
   --repo="https://github.com/tosun-si/sa-custom-roles-gcp-terraform" \
   --repo-type="GITHUB" \
   --branch="main" \
@@ -84,7 +89,7 @@ gcloud beta builds triggers create manual \
 gcloud beta builds triggers create manual \
   --project=$PROJECT_ID \
   --region=$LOCATION \
-  --name="terraform-destroy" \
+  --name="datasets_tables_one_module_terraform-destroy" \
   --repo="https://github.com/tosun-si/sa-custom-roles-gcp-terraform" \
   --repo-type="GITHUB" \
   --branch="main" \
