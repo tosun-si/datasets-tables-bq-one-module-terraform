@@ -1,6 +1,7 @@
 # datasets-tables-bq-one-module-terraform
 
-This project how to create BigQuery Datasets and tables with Terraform and elegant Json configuration. 
+This project how to create BigQuery Datasets and tables with Terraform and elegant Json configuration.
+This example use a single Terraform module to create datasets and tables.
 The deployment of IAC part is done with Cloud Build.
 
 ![datasets_with_tables_one_module_terraform.png](images%2Fdatasets_with_tables_one_module_terraform.png)
